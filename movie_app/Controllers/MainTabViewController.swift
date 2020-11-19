@@ -1,13 +1,13 @@
 //
-//  ShowViewController.swift
+//  MainTabViewController.swift
 //  movie_app
 //
-//  Created by Rafael Avelar on 18/11/20.
+//  Created by Rafael Avelar on 19/11/20.
 //
 
 import UIKit
 
-class ShowViewController: UIViewController {
+class MainTabViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
