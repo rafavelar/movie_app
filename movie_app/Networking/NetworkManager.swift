@@ -43,14 +43,14 @@ public final class NetworkManager {
       }
       
       guard let httpResponse = response as? HTTPURLResponse,
-        (200...299).contains(httpResponse.statusCode) else {
+            (200...299).contains(httpResponse.statusCode) else {
         print("Unexpected response status code: \(String(describing: response))")
         return
       }
       
       if let data = data,
-        let show = try? JSONDecoder().decode(Show.self, from: data) {
-          completionHandler(show)
+         let show = try? JSONDecoder().decode(Show.self, from: data) {
+        completionHandler(show)
       }
     }
     task.resume()
