@@ -71,11 +71,13 @@ class ShowsViewController: UITableViewController {
     return configuration
   }
   
-  private func handleMarkAsFavourite() {
+  private func handleMarkAsFavourite(at offsets: IndexPath) {
     print("Marked as favourite")
   }
   
-  private func handleMoveToTrash() {
-    print("Moved to trash")
+  private func handleMoveToTrash(at indexPath: IndexPath) {
+    shows?.remove(at: indexPath.row)
+    tableView.deleteRows(at: [indexPath], with: .fade)
+    tableView.reloadData()
   }
 }
