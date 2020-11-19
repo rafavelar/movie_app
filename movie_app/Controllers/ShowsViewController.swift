@@ -36,7 +36,7 @@ class ShowsViewController: UITableViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
     let show = self.shows?[indexPath.row]
     cell.textLabel?.text = show?.name
-
+    
     if let strUrl = show?.image.medium {
       let imageUrl = URL(string: strUrl.replacingOccurrences(of: "http", with: "https"))!
       cell.imageView?.setImage(from: imageUrl, withPlaceholder: UIImage(systemName: "wifi.exclamationmark"))
@@ -49,19 +49,33 @@ class ShowsViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
     let action = UIContextualAction(style: .normal,
                                     title: "Favourite") { [weak self] (action, view, completionHandler) in
-                                        self?.handleMarkAsFavourite()
-                                        completionHandler(true)
+      self?.handleMarkAsFavourite()
+      completionHandler(true)
     }
     action.backgroundColor = .systemGreen
     
     return UISwipeActionsConfiguration(actions: [action])
   }
   
-  private func handleMarkAsFavourite() {
-      print("Marked as favourite")
+  override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    // Delete action
+    let delete = UIContextualAction(style: .destructive,
+                                    title: "Delete") { [weak self] (action, view, completionHandler) in
+      self?.handleMoveToTrash()
+      completionHandler(true)
+    }
+    delete.backgroundColor = .systemRed
+    
+    let configuration = UISwipeActionsConfiguration(actions: [delete])
+    
+    return configuration
   }
-
+  
+  private func handleMarkAsFavourite() {
+    print("Marked as favourite")
+  }
+  
   private func handleMoveToTrash() {
-      print("Moved to trash")
+    print("Moved to trash")
   }
 }
