@@ -15,6 +15,8 @@
 		534B3DAA2564D835002C5F85 /* movie_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B3DA92564D835002C5F85 /* movie_appTests.swift */; };
 		534B3DB52564D835002C5F85 /* movie_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B3DB42564D835002C5F85 /* movie_appUITests.swift */; };
 		534B3DD82565EB8E002C5F85 /* TvShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B3DD72565EB8E002C5F85 /* TvShowsViewController.swift */; };
+		534B3DDE2565EC0B002C5F85 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B3DDD2565EC0B002C5F85 /* NetworkManager.swift */; };
+		534B3DE62565ECC7002C5F85 /* ApiResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B3DE52565ECC7002C5F85 /* ApiResponses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		534B3DB42564D835002C5F85 /* movie_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movie_appUITests.swift; sourceTree = "<group>"; };
 		534B3DB62564D835002C5F85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		534B3DD72565EB8E002C5F85 /* TvShowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowsViewController.swift; sourceTree = "<group>"; };
+		534B3DDD2565EC0B002C5F85 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		534B3DE52565ECC7002C5F85 /* ApiResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,8 @@
 		534B3DDC2565EBCD002C5F85 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				534B3DDD2565EC0B002C5F85 /* NetworkManager.swift */,
+				534B3DE52565ECC7002C5F85 /* ApiResponses.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -274,7 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				534B3DDE2565EC0B002C5F85 /* NetworkManager.swift in Sources */,
 				534B3D932564D834002C5F85 /* AppDelegate.swift in Sources */,
+				534B3DE62565ECC7002C5F85 /* ApiResponses.swift in Sources */,
 				534B3DD82565EB8E002C5F85 /* TvShowsViewController.swift in Sources */,
 				534B3D952564D834002C5F85 /* SceneDelegate.swift in Sources */,
 			);
