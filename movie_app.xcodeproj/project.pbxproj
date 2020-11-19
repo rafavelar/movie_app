@@ -19,6 +19,7 @@
 		534B3DF62566D4BA002C5F85 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B3DF52566D4BA002C5F85 /* MainTabViewController.swift */; };
 		534B3DFB2566E0B6002C5F85 /* ShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B3DFA2566E0B6002C5F85 /* ShowsViewController.swift */; };
 		534B3E002566E1C0002C5F85 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B3DFF2566E1C0002C5F85 /* FavoritesTableViewController.swift */; };
+		534B3E062566FF4C002C5F85 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B3E052566FF4C002C5F85 /* UIImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		534B3DF52566D4BA002C5F85 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		534B3DFA2566E0B6002C5F85 /* ShowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsViewController.swift; sourceTree = "<group>"; };
 		534B3DFF2566E1C0002C5F85 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		534B3E052566FF4C002C5F85 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		534B3D912564D834002C5F85 /* movie_app */ = {
 			isa = PBXGroup;
 			children = (
+				534B3E042566FF24002C5F85 /* Util */,
 				534B3DDC2565EBCD002C5F85 /* Networking */,
 				534B3DD62565EB4E002C5F85 /* Controllers */,
 				534B3D922564D834002C5F85 /* AppDelegate.swift */,
@@ -154,6 +157,14 @@
 				534B3DE52565ECC7002C5F85 /* ApiResponses.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		534B3E042566FF24002C5F85 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				534B3E052566FF4C002C5F85 /* UIImageViewExtension.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +303,7 @@
 				534B3DFB2566E0B6002C5F85 /* ShowsViewController.swift in Sources */,
 				534B3DE62565ECC7002C5F85 /* ApiResponses.swift in Sources */,
 				534B3E002566E1C0002C5F85 /* FavoritesTableViewController.swift in Sources */,
+				534B3E062566FF4C002C5F85 /* UIImageViewExtension.swift in Sources */,
 				534B3D952564D834002C5F85 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
