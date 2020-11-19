@@ -44,4 +44,17 @@ class ShowsViewController: UITableViewController {
     
     return cell
   }
+  
+  // MARK: - Swipe Actions
+  override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    <#code#>
+  }
+  
+  private func handleMarkAsFavourite() {
+      print("Marked as favourite")
+  }
+
+  private func handleMoveToTrash() {
+      print("Moved to trash")
+  }
 }
