@@ -39,7 +39,7 @@ class ShowsViewController: UITableViewController {
 
     if let strUrl = show?.image.medium {
       let imageUrl = URL(string: strUrl.replacingOccurrences(of: "http", with: "https"))!
-      cell.imageView?.setImage(from: imageUrl, withPlaceholder: UIImage(systemName: "paperplane.fill"))
+      cell.imageView?.setImage(from: imageUrl, withPlaceholder: UIImage(systemName: "wifi.exclamationmark"))
     }
     
     return cell
