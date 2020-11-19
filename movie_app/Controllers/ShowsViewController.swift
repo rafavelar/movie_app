@@ -36,8 +36,12 @@ class ShowsViewController: UITableViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
     let show = self.shows?[indexPath.row]
     cell.textLabel?.text = show?.name
+
+    if let strUrl = show?.image.medium {
+      let imageUrl = URL(string: strUrl.replacingOccurrences(of: "http", with: "https"))!
+      cell.imageView?.setImage(from: imageUrl, withPlaceholder: UIImage(systemName: "paperplane.fill"))
+    }
     
-    //cell.imageView?.image
     return cell
   }
 }
