@@ -17,6 +17,8 @@
 		534B3DDE2565EC0B002C5F85 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B3DDD2565EC0B002C5F85 /* NetworkManager.swift */; };
 		534B3DE62565ECC7002C5F85 /* ApiResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B3DE52565ECC7002C5F85 /* ApiResponses.swift */; };
 		534B3DF62566D4BA002C5F85 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B3DF52566D4BA002C5F85 /* MainTabViewController.swift */; };
+		534B3DFB2566E0B6002C5F85 /* ShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B3DFA2566E0B6002C5F85 /* ShowsViewController.swift */; };
+		534B3E002566E1C0002C5F85 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B3DFF2566E1C0002C5F85 /* FavoritesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		534B3DDD2565EC0B002C5F85 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		534B3DE52565ECC7002C5F85 /* ApiResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponses.swift; sourceTree = "<group>"; };
 		534B3DF52566D4BA002C5F85 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		534B3DFA2566E0B6002C5F85 /* ShowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsViewController.swift; sourceTree = "<group>"; };
+		534B3DFF2566E1C0002C5F85 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				534B3DF52566D4BA002C5F85 /* MainTabViewController.swift */,
+				534B3DFA2566E0B6002C5F85 /* ShowsViewController.swift */,
+				534B3DFF2566E1C0002C5F85 /* FavoritesTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -283,7 +289,9 @@
 				534B3DF62566D4BA002C5F85 /* MainTabViewController.swift in Sources */,
 				534B3DDE2565EC0B002C5F85 /* NetworkManager.swift in Sources */,
 				534B3D932564D834002C5F85 /* AppDelegate.swift in Sources */,
+				534B3DFB2566E0B6002C5F85 /* ShowsViewController.swift in Sources */,
 				534B3DE62565ECC7002C5F85 /* ApiResponses.swift in Sources */,
+				534B3E002566E1C0002C5F85 /* FavoritesTableViewController.swift in Sources */,
 				534B3D952564D834002C5F85 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
