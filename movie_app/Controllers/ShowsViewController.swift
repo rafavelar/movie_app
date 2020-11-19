@@ -47,7 +47,14 @@ class ShowsViewController: UITableViewController {
   
   // MARK: - Swipe Actions
   override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-    <#code#>
+    let action = UIContextualAction(style: .normal,
+                                    title: "Favourite") { [weak self] (action, view, completionHandler) in
+                                        self?.handleMarkAsFavourite()
+                                        completionHandler(true)
+    }
+    action.backgroundColor = .systemGreen
+    
+    return UISwipeActionsConfiguration(actions: [action])
   }
   
   private func handleMarkAsFavourite() {
