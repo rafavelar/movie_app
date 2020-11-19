@@ -53,6 +53,7 @@ public final class NetworkManager {
           completionHandler(show)
       }
     }
+    task.resume()
   }
   
 }
