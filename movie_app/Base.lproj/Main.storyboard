@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="-1329" y="-40"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab View Controller-->
         <scene sceneID="WrL-T3-aXb">
             <objects>
-                <tabBarController id="4Of-ho-ugm" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4Of-ho-ugm" customClass="MainTabViewController" customModule="movie_app" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="CZh-Qz-SPX"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lot-1B-Rn4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -42,7 +42,7 @@
             </objects>
             <point key="canvasLocation" x="-564" y="-40"/>
         </scene>
-        <!--TV Shows-->
+        <!--Table View Controller-->
         <scene sceneID="qYR-JX-QkR">
             <objects>
                 <tableViewController id="EWP-Bi-AaA" sceneMemberID="viewController">
@@ -85,13 +85,13 @@
                             <outlet property="delegate" destination="EWP-Bi-AaA" id="Ww3-ag-dEL"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="TV Shows" id="kDn-Kx-5Fx"/>
+                    <tabBarItem key="tabBarItem" selectedImage="tv.and.hifispeaker.fill" catalog="system" id="kDn-Kx-5Fx"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9bB-Cl-BMI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-977" y="641"/>
         </scene>
-        <!--Favorites-->
+        <!--Table View Controller-->
         <scene sceneID="h6i-jC-DKe">
             <objects>
                 <tableViewController id="Dvd-Ct-udq" sceneMemberID="viewController">
@@ -114,7 +114,7 @@
                             <outlet property="delegate" destination="Dvd-Ct-udq" id="Ilx-P5-gW1"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Favorites" id="lO0-ll-bw3"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="lO0-ll-bw3"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="shU-N3-Pom" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,6 +123,7 @@
     </scenes>
     <resources>
         <image name="paperclip" catalog="system" width="121" height="128"/>
+        <image name="tv.and.hifispeaker.fill" catalog="system" width="128" height="89"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
