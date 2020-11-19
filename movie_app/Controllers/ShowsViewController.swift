@@ -49,7 +49,7 @@ class ShowsViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
     let action = UIContextualAction(style: .normal,
                                     title: "Favourite") { [weak self] (action, view, completionHandler) in
-      self?.handleMarkAsFavourite()
+      self?.handleMarkAsFavourite(at: indexPath)
       completionHandler(true)
     }
     action.backgroundColor = .systemGreen
@@ -61,7 +61,7 @@ class ShowsViewController: UITableViewController {
     // Delete action
     let delete = UIContextualAction(style: .destructive,
                                     title: "Delete") { [weak self] (action, view, completionHandler) in
-      self?.handleMoveToTrash()
+      self?.handleMoveToTrash(at: indexPath)
       completionHandler(true)
     }
     delete.backgroundColor = .systemRed
