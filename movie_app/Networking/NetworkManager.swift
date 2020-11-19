@@ -21,7 +21,7 @@ public final class NetworkManager {
       }
       
       guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-        print("Error with the response, unexpected status code: \(response ?? "No error")")
+        print("Error with the response, unexpected status code: \(String(describing: response))")
         return
       }
       
@@ -31,6 +31,28 @@ public final class NetworkManager {
       }
     })
     task.resume()
+  }
+  
+  private func fetchShow(withId id:Int, completionHandler: @escaping (Show) -> Void) {
+    let url = URL(string: domainUrlString + "shows/\(id)")!
+    
+    let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+      if let error = error {
+        print("Error returning show id \(id): \(error)")
+        return
+      }
+      
+      guard let httpResponse = response as? HTTPURLResponse,
+        (200...299).contains(httpResponse.statusCode) else {
+        print("Unexpected response status code: \(String(describing: response))")
+        return
+      }
+      
+      if let data = data,
+        let show = try? JSONDecoder().decode(Show.self, from: data) {
+          completionHandler(show)
+      }
+    }
   }
   
 }
