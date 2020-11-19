@@ -71,8 +71,8 @@ class ShowsViewController: UITableViewController {
     return configuration
   }
   
-  private func handleMarkAsFavourite(at offsets: IndexPath) {
-    print("Marked as favourite")
+  private func handleMarkAsFavourite(at indexPath: IndexPath) {
+    print(self.shows?[indexPath.row] ?? "Sin shows")
   }
   
   private func handleMoveToTrash(at indexPath: IndexPath) {
