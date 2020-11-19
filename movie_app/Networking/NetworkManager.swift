@@ -10,7 +10,7 @@ import Foundation
 public final class NetworkManager {
   
   var shows: [Show] = []
-  private let domainUrlString = "http://api.tvmaze.com/"
+  private let domainUrlString = "https://api.tvmaze.com/"
   
   func fetchShows(completionHandler: @escaping ([Show]) -> Void){
     let url = URL(string: domainUrlString + "shows")!
