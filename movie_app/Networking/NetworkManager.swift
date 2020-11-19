@@ -27,7 +27,7 @@ public final class NetworkManager {
       
       if let data = data,
          let showSummary = try? JSONDecoder().decode(ShowSummary.self, from: data) {
-        completionHandler(showSummary.results ?? [])
+        completionHandler(showSummary)
       }
     })
     task.resume()
