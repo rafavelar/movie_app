@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct TvShow: Codable {
+struct ShowSummary: Codable {
+  let count: Int?
+  let results: [Show]?
+}
+
+struct Show: Codable {
   let id: Int
   let url: String
   let name: String
