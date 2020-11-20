@@ -432,10 +432,19 @@
                                     <constraint firstItem="pjs-jG-qgk" firstAttribute="leading" secondItem="Fcb-Bw-xAk" secondAttribute="trailing" constant="5" id="3ia-iy-nox"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztj-q2-t1l">
+                                <rect key="frame" x="100" y="719.5" width="214" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="openIMDb:" destination="1tR-SZ-nat" eventType="touchUpInside" id="Ise-B6-cOH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ouI-j2-7Fa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ztj-q2-t1l" firstAttribute="top" secondItem="W7c-1O-fsT" secondAttribute="bottom" constant="20" id="2K0-Id-j1w"/>
+                            <constraint firstItem="ouI-j2-7Fa" firstAttribute="trailing" secondItem="ztj-q2-t1l" secondAttribute="trailing" constant="100" id="3IW-lr-g3O"/>
                             <constraint firstItem="Ss1-cY-xfo" firstAttribute="top" secondItem="aTH-Qg-eiG" secondAttribute="bottom" constant="5" id="6oR-Gn-bmo"/>
                             <constraint firstItem="ouI-j2-7Fa" firstAttribute="trailing" secondItem="q8A-ar-Jgd" secondAttribute="trailing" constant="20" id="B9s-Ni-X8q"/>
                             <constraint firstItem="69d-g1-WxT" firstAttribute="top" secondItem="ouI-j2-7Fa" secondAttribute="top" constant="5" id="CqQ-C7-Bt9"/>
@@ -454,12 +463,14 @@
                             <constraint firstItem="aTH-Qg-eiG" firstAttribute="leading" secondItem="ouI-j2-7Fa" secondAttribute="leading" constant="20" id="rEK-wP-rJq"/>
                             <constraint firstItem="q8A-ar-Jgd" firstAttribute="top" secondItem="gyJ-zf-kcl" secondAttribute="bottom" constant="10" id="rK8-9V-aRF"/>
                             <constraint firstItem="q8A-ar-Jgd" firstAttribute="leading" secondItem="ouI-j2-7Fa" secondAttribute="leading" constant="20" id="rSf-cn-bR6"/>
+                            <constraint firstItem="ztj-q2-t1l" firstAttribute="leading" secondItem="ouI-j2-7Fa" secondAttribute="leading" constant="100" id="rY5-qc-Z3f"/>
                             <constraint firstItem="W7c-1O-fsT" firstAttribute="top" secondItem="A5i-Ps-XcP" secondAttribute="bottom" constant="5" id="yhl-PU-POQ"/>
                             <constraint firstItem="69d-g1-WxT" firstAttribute="centerX" secondItem="q24-oc-WAm" secondAttribute="centerX" id="zex-oo-wD6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="s4Z-Um-e0A"/>
                     <connections>
+                        <outlet property="IMDbButton" destination="ztj-q2-t1l" id="der-5l-6I5"/>
                         <outlet property="imageShowDetail" destination="69d-g1-WxT" id="SLs-JP-heF"/>
                         <outlet property="imdbShowDetail" destination="pjs-jG-qgk" id="slu-g2-6c0"/>
                         <outlet property="languageShowDetail" destination="wA5-54-Lp0" id="JGF-Fh-oAf"/>
@@ -470,7 +481,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9u-u9-ucO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94" y="1412"/>
+            <point key="canvasLocation" x="-94.20289855072464" y="1411.6071428571429"/>
         </scene>
     </scenes>
     <resources>
