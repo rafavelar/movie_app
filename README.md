@@ -70,4 +70,4 @@ I could end this project if I choose Alamofire and Realm, those libraries makes 
 I'm so inpired by my teacher Norberto Ortigoza, The way he teaches iOS development is very clear.
 
 ## Contact
-Created by [@raff_avelar](https://www.rafaelavelar.com/) - feel free to contact me!
+Created by [@raff_avelar](https://rafaelavelar.com/) - feel free to contact me!
