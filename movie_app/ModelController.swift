@@ -38,4 +38,20 @@ extension UIViewController {
       
     }
   }
+  
+  func getShows() -> [ShowEntity]? {
+    let results: [ShowEntity]
+    if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+      let context = appDelegate.persistentContainer.viewContext
+      let fetchRequest = NSFetchRequest<ShowEntity>(entityName: "ShowEntity")
+      
+      do {
+        results = try context.fetch(fetchRequest)
+        return results
+      } catch let error{
+        print("Retrieving Failed \(error)")
+      }
+    }
+    return nil
+  }
 }
