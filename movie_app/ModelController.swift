@@ -21,13 +21,13 @@ extension UIViewController {
       //Fill the show
       newShow.setValue(show.id, forKey: "id")
       newShow.setValue(show.externals.imdb, forKey: "imdb")
-      newShow.setValue(show.language, forKey: "language")
-      newShow.setValue(show.image.medium, forKey: "medium_image")
+      newShow.setValue(show.language.rawValue, forKey: "language")
+      newShow.setValue(URL(string: show.image.medium), forKey: "medium_image")
       newShow.setValue(show.name, forKey: "name")
-      newShow.setValue(show.image.original, forKey: "original_image")
-      newShow.setValue(show.status, forKey: "status")
+      newShow.setValue(URL(string: show.image.original), forKey: "original_image")
+      newShow.setValue(show.status.rawValue, forKey: "status")
       newShow.setValue(show.summary, forKey: "summary")
-      newShow.setValue(show.url, forKey: "url")
+      newShow.setValue(URL(string: show.url), forKey: "url")
       
       do {
         try context.save()
