@@ -14,11 +14,10 @@ class ShowDetailViewController: UIViewController {
   @IBOutlet weak var imageShowDetail: UIImageView!
   @IBOutlet weak var summaryShowDetail: UITextView!
   
-  @IBOutlet weak var networkShowDetail: UILabel!
-  @IBOutlet weak var scheduleShowDetail: UILabel!
+  @IBOutlet weak var nameShowDetail: UILabel!
+  @IBOutlet weak var languageShowDetail: UILabel!
   @IBOutlet weak var statusShowDetail: UILabel!
-  @IBOutlet weak var showTypeDetail: UILabel!
-  @IBOutlet weak var siteShowDetail: UILabel!
+  @IBOutlet weak var imdbShowDetail: UILabel!
   
   
   override func viewDidLoad() {
@@ -33,12 +32,15 @@ class ShowDetailViewController: UIViewController {
   func setShowInfo(show: Show){
     
     //Set the image
-    let imageUrl = URL(string: show.image.original.replacingOccurrences(of: "http", with: "https"))!
-    imageShowDetail.setImage(from: imageUrl, withPlaceholder: UIImage(systemName: "wifi.exclamationmark"))
+    if let imageUrl = URL(string: show.image.original.replacingOccurrences(of: "http", with: "https")){
+      imageShowDetail.setImage(from: imageUrl, withPlaceholder: UIImage(systemName: "wifi.exclamationmark"))
+    }
     
     //Set summary
     summaryShowDetail.text = show.summary
-    networkShowDetail.text = show.network?.name
+    summaryShowDetail.layer.borderWidth = 1
+    summaryShowDetail.layer.borderColor = UIColor.gray.cgColor
+    languageShowDetail.text = show.network?.name
   }
   
   
