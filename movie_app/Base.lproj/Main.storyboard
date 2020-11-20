@@ -288,7 +288,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="OXR-gr-LrS" kind="show" id="FJ5-xl-8ox"/>
+                                    <segue destination="OXR-gr-LrS" kind="show" identifier="FavoriteDetailShow" id="FJ5-xl-8ox"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -39,6 +39,33 @@ class FavoritesTableViewController: UITableViewController {
     return cell
   }
   
+  private func handleMoveToTrash(at indexPath: IndexPath) {
+    deleteShow(show: (shows?[indexPath.row])!)
+    shows?.remove(at: indexPath.row)
+    tableView.deleteRows(at: [indexPath], with: .fade)
+    tableView.reloadData()
+  }
+  
+  // MARK: - Navigation
+  
+  // In a storyboard-based application, you will often want to do a little preparation before navigation
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    switch segue.identifier {
+    case "FavoriteDetailShow"?:
+      if let row = tableView.indexPathForSelectedRow?.row {
+        let show = shows?[row]
+        let detailFavoriteViewController = segue.destination as! FavoriteDetailViewController
+        detailFavoriteViewController.show = show
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = "Shows \(show?.id ?? 0)"
+        navigationItem.backBarButtonItem = backItem
+      }
+    default:
+      print("Sin eventos")
+    }
+  }
+  
   // MARK: - Swipe Actions
   override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
     // Delete action
@@ -52,13 +79,6 @@ class FavoritesTableViewController: UITableViewController {
     let configuration = UISwipeActionsConfiguration(actions: [delete])
     
     return configuration
-  }
-  
-  private func handleMoveToTrash(at indexPath: IndexPath) {
-    deleteShow(show: (shows?[indexPath.row])!)
-    shows?.remove(at: indexPath.row)
-    tableView.deleteRows(at: [indexPath], with: .fade)
-    tableView.reloadData()
   }
   
 }
