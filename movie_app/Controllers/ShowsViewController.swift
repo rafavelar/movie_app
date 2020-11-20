@@ -14,6 +14,8 @@ class ShowsViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    self.tabBarController?.navigationItem.title = "TV Shows"
+    
     NetworkManager().fetchShows{ (shows) in
       self.shows = shows
       DispatchQueue.main.async {
@@ -91,8 +93,20 @@ class ShowsViewController: UITableViewController {
   }
   
   private func handleMoveToTrash(at indexPath: IndexPath) {
-    shows?.remove(at: indexPath.row)
-    tableView.deleteRows(at: [indexPath], with: .fade)
-    tableView.reloadData()
+    
+    let deleteAlert = UIAlertController(title: "Warning", message: "¿Deseas eliminar el show de la lista?", preferredStyle: UIAlertController.Style.alert)
+    
+    deleteAlert.addAction(UIAlertAction(title: "Si", style: .default, handler: { (action: UIAlertAction!) in
+      self.shows?.remove(at: indexPath.row)
+      self.tableView.deleteRows(at: [indexPath], with: .fade)
+      self.tableView.reloadData()
+      print("Handle Ok logic here")
+    }))
+    
+    deleteAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action: UIAlertAction!) in
+      print("Handle Cancel Logic here")
+    }))
+    
+    present(deleteAlert, animated: true, completion: nil)
   }
 }
