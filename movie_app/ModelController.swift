@@ -22,13 +22,13 @@ extension UIViewController {
       newShow.setValue(show.id, forKey: "id")
       newShow.setValue(show.externals.imdb, forKey: "imdb")
       newShow.setValue(show.language.rawValue, forKey: "language")
-      newShow.setValue(URL(string: show.image.medium), forKey: "medium_image")
+      newShow.setValue(URL(string: show.image.medium.replacingOccurrences(of: "http", with: "https")), forKey: "medium_image")
       newShow.setValue(show.name, forKey: "name")
       newShow.setValue(URL(string: show.image.original), forKey: "original_image")
+      newShow.setValue(URL(string: show.url.replacingOccurrences(of: "http", with: "https")), forKey: "original_image")
       newShow.setValue(show.status.rawValue, forKey: "status")
       newShow.setValue(show.summary, forKey: "summary")
-      newShow.setValue(URL(string: show.url), forKey: "url")
-      
+      newShow.setValue(URL(string: show.url.replacingOccurrences(of: "http", with: "https")), forKey: "url")
       do {
         try context.save()
         print("It is saved !!* \\o/")
