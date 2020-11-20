@@ -55,9 +55,9 @@ class FavoritesTableViewController: UITableViewController {
   }
   
   private func handleMoveToTrash(at indexPath: IndexPath) {
-    shows?.remove(at: indexPath.row-1)
+    deleteShow(show: (shows?[indexPath.row])!)
+    shows?.remove(at: indexPath.row)
     tableView.deleteRows(at: [indexPath], with: .fade)
-    deleteShow(show: (shows?[indexPath.row-1])!)
     tableView.reloadData()
   }
   
