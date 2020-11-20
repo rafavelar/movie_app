@@ -38,4 +38,11 @@ class FavoritesTableViewController: UITableViewController {
     
     return cell
   }
+  
+  private func handleMoveToTrash(at indexPath: IndexPath) {
+    shows?.remove(at: indexPath.row)
+    tableView.deleteRows(at: [indexPath], with: .fade)
+    tableView.reloadData()
+  }
+  
 }
