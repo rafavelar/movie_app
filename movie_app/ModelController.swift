@@ -39,6 +39,13 @@ extension UIViewController {
     }
   }
   
+  func deleteShow(show: ShowEntity){
+    if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+      let context = appDelegate.persistentContainer.viewContext
+      context.delete(show)
+    }
+  }
+  
   func getShows() -> [ShowEntity]? {
     let results: [ShowEntity]
     if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
