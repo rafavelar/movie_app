@@ -119,8 +119,8 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="Dvd-Ct-udq" id="kd0-i4-Gd8"/>
-                            <outlet property="delegate" destination="Dvd-Ct-udq" id="Ilx-P5-gW1"/>
+                            <outlet property="dataSource" destination="Dvd-Ct-udq" id="Qzg-X7-MvI"/>
+                            <outlet property="delegate" destination="Dvd-Ct-udq" id="fW7-V9-Ksj"/>
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="lO0-ll-bw3"/>
