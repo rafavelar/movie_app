@@ -12,6 +12,7 @@ class FavoritesTableViewController: UITableViewController {
   private var shows: [ShowEntity]?
   
   override func viewDidLoad() {
+    self.tabBarController?.navigationItem.title = "Favorites Shows"
     super.viewDidLoad()
   }
   
@@ -40,10 +41,21 @@ class FavoritesTableViewController: UITableViewController {
   }
   
   private func handleMoveToTrash(at indexPath: IndexPath) {
-    deleteShow(show: (shows?[indexPath.row])!)
-    shows?.remove(at: indexPath.row)
-    tableView.deleteRows(at: [indexPath], with: .fade)
-    tableView.reloadData()
+    
+    let deleteAlert = UIAlertController(title: "Warning", message: "¿Deseas eliminar el show Favoritos?", preferredStyle: UIAlertController.Style.alert)
+    
+    deleteAlert.addAction(UIAlertAction(title: "Si", style: .default, handler: { (action: UIAlertAction!) in
+      self.deleteShow(show: (self.shows?[indexPath.row])!)
+      self.shows?.remove(at: indexPath.row)
+      self.tableView.deleteRows(at: [indexPath], with: .fade)
+      self.tableView.reloadData()
+    }))
+    
+    deleteAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action: UIAlertAction!) in
+      
+    }))
+    
+    present(deleteAlert, animated: true, completion: nil)
   }
   
   // MARK: - Navigation
