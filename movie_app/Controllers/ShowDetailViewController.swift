@@ -40,7 +40,11 @@ class ShowDetailViewController: UIViewController {
     summaryShowDetail.text = show.summary
     summaryShowDetail.layer.borderWidth = 1
     summaryShowDetail.layer.borderColor = UIColor.gray.cgColor
-    languageShowDetail.text = show.network?.name
+    
+    nameShowDetail.text = show.name
+    languageShowDetail.text = show.language.rawValue
+    statusShowDetail.text = show.status.rawValue
+    imdbShowDetail.text = show.externals.imdb
   }
   
   
