@@ -72,7 +72,7 @@ class ShowsViewController: UITableViewController {
   }
   
   private func handleMarkAsFavourite(at indexPath: IndexPath) {
-    print(self.shows?[indexPath.row] ?? "Sin shows")
+    save(show: (self.shows?[indexPath.row])!)
   }
   
   private func handleMoveToTrash(at indexPath: IndexPath) {
