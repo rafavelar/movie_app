@@ -458,7 +458,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="o1i-co-3R8"/>
                     <connections>
-                        <outlet property="imageShowDetail" destination="nVa-V6-nZp" id="YJg-ka-fSQ"/>
+                        <outlet property="imageShowDetail" destination="nVa-V6-nZp" id="mro-92-FvQ"/>
                         <outlet property="imdbShowDetail" destination="Fxt-ab-4gk" id="JSu-s6-3M3"/>
                         <outlet property="languageShowDetail" destination="hiB-i6-vqX" id="Nfv-XX-Fbd"/>
                         <outlet property="nameShowDetail" destination="PM9-Co-F1I" id="usB-i0-dKj"/>
