@@ -40,6 +40,26 @@ class ShowsViewController: UITableViewController {
     return cell
   }
   
+  // MARK: - Navigation
+  
+  // In a storyboard-based application, you will often want to do a little preparation before navigation
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    switch segue.identifier {
+    case "showDetailShow"?:
+      if let row = tableView.indexPathForSelectedRow?.row {
+        let show = shows?[row]
+        let detailShowViewController = segue.destination as! ShowDetailViewController
+        detailShowViewController.show = show
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = "Shows \(show?.id ?? 0)"
+        navigationItem.backBarButtonItem = backItem
+      }
+    default:
+      print("Sin eventos")
+    }
+  }
+  
   // MARK: - Swipe Actions
   override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
     let action = UIContextualAction(style: .normal,
