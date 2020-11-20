@@ -21,6 +21,7 @@
 		534B3E002566E1C0002C5F85 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B3DFF2566E1C0002C5F85 /* FavoritesTableViewController.swift */; };
 		534B3E062566FF4C002C5F85 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B3E052566FF4C002C5F85 /* UIImageViewExtension.swift */; };
 		534B3E0F25673F94002C5F85 /* MovieModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 534B3E0D25673F94002C5F85 /* MovieModel.xcdatamodeld */; };
+		534B3E1D25674EC8002C5F85 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B3E1C25674EC8002C5F85 /* ModelController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		534B3DFF2566E1C0002C5F85 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		534B3E052566FF4C002C5F85 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		534B3E0E25673F94002C5F85 /* MovieModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieModel.xcdatamodel; sourceTree = "<group>"; };
+		534B3E1C25674EC8002C5F85 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				534B3D9D2564D835002C5F85 /* LaunchScreen.storyboard */,
 				534B3DA02564D835002C5F85 /* Info.plist */,
 				534B3E0D25673F94002C5F85 /* MovieModel.xcdatamodeld */,
+				534B3E1C25674EC8002C5F85 /* ModelController.swift */,
 			);
 			path = movie_app;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				534B3DF62566D4BA002C5F85 /* MainTabViewController.swift in Sources */,
+				534B3E1D25674EC8002C5F85 /* ModelController.swift in Sources */,
 				534B3E0F25673F94002C5F85 /* MovieModel.xcdatamodeld in Sources */,
 				534B3DDE2565EC0B002C5F85 /* NetworkManager.swift in Sources */,
 				534B3D932564D834002C5F85 /* AppDelegate.swift in Sources */,
