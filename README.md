@@ -3,20 +3,22 @@
 > This project list the tv shows from `https://api.tvmaze.com`.
 
 ## Table of contents
+
 * [General info](#general-info)
-* * [Screenshots](#screenshots)
-* * [Technologies](#technologies)
-* * [Setup](#setup)
-* * [Features](#features)
-* * [Status](#status)
-* * [Inspiration](#inspiration)
-* * [Contact](#contact)
+* [Screenshots](#screenshots)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Features](#features)
+* [Status](#status)
+* [Inspiration](#inspiration)
+* [Contact](#contact)
 
 ## General info
+
 This project consist in two screens.
 
 1.- The first one list all the tv shows from the page.
-2.- The second one is a list form the shows marked as favorites for the user.
+2.- The second one is a list form the shows marked as favourites for the user.
 
 ## Screenshots
 
@@ -29,45 +31,50 @@ This project consist in two screens.
 ## Technologies
 
 * Xcode Version 12.2 (12B45b)
-* * Target iOS 14.2
-* * Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)
-* * Core Data
-*
+* Target iOS 14.2
+* Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)
+* Core Data
+
 ## Setup
 
-To execute the project follow the next stepts:
+To execute the project follow the next steps:
 
 1. Clone te repository.
-2. 2. Open it in Xcode
-3. 3. Run it on the simulator or device.
+2. Open it in Xcode
+3. Run it on the simulator or device.
 
 ## Features
+
 List of features ready and TODOs for future development
 
 * List all shows
-* * Save Favorites in local core data database
-* * Show alerts at deleting favorites
-* * Show detail view for Shows
-* * Show detail view for Favorites
-* * Show button to open IMDb page
+* Save Favourites in local core data database
+* Show alerts at deleting favourites
+* Show detail view for Shows
+* Show detail view for Favourites
+* Show button to open IMDb page
+
 To-do list:
-* End the logic for Delete button in Favorite Detail view.
-* * Adjust the size of the images in tables.
-* * Show loader while the firts list is downlading.
-* * Test Units.
 
-## Status
-Project is: _in progress_, I spent to many time trying to decide what technologies I should use.
+  * End the logic for Delete button in Favourite Detail view.
+  * Adjust the size of the images in tables.
+  * Show loader while the first list is downloading.
+  * Test Units.
 
+ ## Status
+
+Project is: _in progress_, I spent too many time trying to decide what technologies I should use.
 I use MVC architecture because it is the stable one in the market.
-I try to avoid adding external libriries for this project, that makes me speend time configuring the swift way.
+I try to avoid adding external libraries for this project, that makes me spend time configuring the swift way.
 I can improve my code spending more time working in iOS.
 
 I could end this project if I choose Alamofire and Realm, those libraries makes the develop easier.
 
 
 ## Inspiration
-I'm so inpired by my teacher Norberto Ortigoza, The way he teaches iOS development is very clear.
+
+I'm so inspired by my teacher Norberto Ortigoza, The way he teaches iOS development is very clear.
 
 ## Contact
+
 Created by [@raff_avelar](https://rafaelavelar.com/) - feel free to contact me!
