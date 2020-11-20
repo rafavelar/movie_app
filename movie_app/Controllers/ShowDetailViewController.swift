@@ -11,11 +11,34 @@ class ShowDetailViewController: UIViewController {
   
   var show: Show?
   
+  @IBOutlet weak var imageShowDetail: UIImageView!
+  @IBOutlet weak var summaryShowDetail: UITextView!
+  
+  @IBOutlet weak var networkShowDetail: UILabel!
+  @IBOutlet weak var scheduleShowDetail: UILabel!
+  @IBOutlet weak var statusShowDetail: UILabel!
+  @IBOutlet weak var showTypeDetail: UILabel!
+  @IBOutlet weak var siteShowDetail: UILabel!
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     // Do any additional setup after loading the view.
-    print(show)
+    if let showDetail = show{
+      setShowInfo(show: showDetail);
+    }
+  }
+  
+  func setShowInfo(show: Show){
+    
+    //Set the image
+    let imageUrl = URL(string: show.image.original.replacingOccurrences(of: "http", with: "https"))!
+    imageShowDetail.setImage(from: imageUrl, withPlaceholder: UIImage(systemName: "wifi.exclamationmark"))
+    
+    //Set summary
+    summaryShowDetail.text = show.summary
+    networkShowDetail.text = show.network?.name
   }
   
   
