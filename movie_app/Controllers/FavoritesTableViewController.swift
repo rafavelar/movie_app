@@ -39,6 +39,21 @@ class FavoritesTableViewController: UITableViewController {
     return cell
   }
   
+  // MARK: - Swipe Actions
+  override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    // Delete action
+    let delete = UIContextualAction(style: .destructive,
+                                    title: "Delete") { [weak self] (action, view, completionHandler) in
+      self?.handleMoveToTrash(at: indexPath)
+      completionHandler(true)
+    }
+    delete.backgroundColor = .systemRed
+    
+    let configuration = UISwipeActionsConfiguration(actions: [delete])
+    
+    return configuration
+  }
+  
   private func handleMoveToTrash(at indexPath: IndexPath) {
     shows?.remove(at: indexPath.row)
     tableView.deleteRows(at: [indexPath], with: .fade)
