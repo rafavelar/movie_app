@@ -25,6 +25,7 @@ class ShowDetailViewController: UIViewController {
     
     // Do any additional setup after loading the view.
     if let showDetail = show{
+      self.title? = showDetail.name
       setShowInfo(show: showDetail);
     }
   }
