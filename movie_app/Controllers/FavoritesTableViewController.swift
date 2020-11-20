@@ -9,6 +9,8 @@ import UIKit
 
 class FavoritesTableViewController: UITableViewController {
   
+  private var shows: [ShowEntity]?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
